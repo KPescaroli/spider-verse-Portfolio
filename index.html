@@ -19,460 +19,197 @@
     />
     <link rel="stylesheet" href="style.css" />
 
-    <!-- BIBLIOTECAS DE ANIMAÇÃO E 3D -->
+    <!-- BIBLIOTECAS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-
-    <!-- Biblioteca profissional de animações -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-
-    <!-- Permite ativar animações quando o usuário rola a página -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      defer
-    ></script>
-
-    <!-- Arquivo JavaScript principal do projeto -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
-
   </head>
+
   <body>
 
-    <!-- TELA DE INTRO / LOADING -->
-    <!-- Aparece quando o site carrega -->
+    <!-- INTRO -->
     <div class="intro-overlay" id="introOverlay">
-
-      <!-- Texto pequeno acima do título -->
-      <p class="intro-kicker">
-        Portfolio Protocol v2.099
-      </p>
-
-      <!-- Título grande da intro -->
-      <h1 class="intro-title">
-        SPIDER-VERSE EXPERIENCE
-      </h1>
-
-      <!-- Barra de loading animada -->
-      <div class="intro-loader">
-        <span></span>
-      </div>
-
+      <p class="intro-kicker">Portfolio Protocol v2.099</p>
+      <h1 class="intro-title">SPIDER-VERSE EXPERIENCE</h1>
+      <div class="intro-loader"><span></span></div>
     </div>
 
-    <!-- Onde o JavaScript desenha efeitos visuais -->
-    <!-- teias animadas -->
     <canvas id="background-web-canvas"></canvas>
 
-
-
-   
-    <!-- HEADER / MENU SUPERIOR -->
-    <!-- Navegação principal do site -->
-
+    <!-- HEADER -->
     <header class="top-nav">
+      <a href="#home" class="brand">SV_KP_Portfolio</a>
 
-      <!-- Nome da marca / logo -->
-      <a href="#home" class="brand">
-        SVX_DevPortfolio
-      </a>
-
-
-      <!-- BOTÕES DE TROCA DE IDIOMA -->
       <div class="lang-switch">
-
-        <!-- Português -->
-        <button class="lang-btn" id="langPt" data-lang="pt">
-          PT
-        </button>
-
-        <!-- Inglês -->
-        <button class="lang-btn" id="langEn" data-lang="en">
-          EN
-        </button>
-
+        <button class="lang-btn" id="langPt">PT</button>
+        <button class="lang-btn" id="langEn">EN</button>
       </div>
 
-      <!-- BOTÃO DO MENU MOBILE -->
-      <!-- Aparece apenas em celular -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
       </button>
 
-      <!-- LINKS DO MENU -->
-      <!-- Navegação entre seções -->
       <nav class="nav-links" id="navLinks">
-
         <a href="#home">Home</a>
-
         <a href="#characters">Characters</a>
-
         <a href="#multiverse">Multiverse</a>
-
         <a href="#gallery">Gallery</a>
-
         <a href="#about">About</a>
-
         <a href="#contact">Contact</a>
-
       </nav>
-
     </header>
 
     <main>
-      <!-- Primeira tela do site -->
 
+      <!-- HERO -->
       <section class="hero section" id="home">
-
-        <!-- Texto principal -->
         <div class="hero-content">
-
-          <p class="hero-label">
-            Cinematic Front-end Showcase
-          </p>
-
-          <h2 class="hero-title">
-            SPIDER-VERSE EXPERIENCE
-          </h2>
-
+          <p class="hero-label">Cinematic Front-end Showcase</p>
+          <h2 class="hero-title">SPIDER-VERSE EXPERIENCE</h2>
           <p class="hero-description">
-            Um projeto de portfólio de alto impacto com Three.js, GSAP e interface futurista,
+            Um projeto de portfólio de alto impacto com GSAP e interface futurista,
             combinando narrativa visual, 3D e microinterações profissionais.
           </p>
-
-          <!-- Botão que leva para a próxima seção -->
-          <a href="#characters" class="btn-primary">
-            Enter the Multiverse
-          </a>
-
+          <a href="#characters" class="btn-primary">Enter the Multiverse</a>
         </div>
 
-
-        <!-- Área onde o 3D aparece -->
         <div class="hero-visual">
-
-          <!-- Canvas usado pelo Three.js -->
           <canvas id="hero-3d-canvas"></canvas>
-
         </div>
-
       </section>
 
-      <!-- SEÇÃO DE PERSONAGENS -->
-      <!-- Cards com personagens -->
-      <!-- ========================= -->
-
+      <!-- PERSONAGENS -->
       <section class="characters section" id="characters">
-
         <div class="section-header">
-
-          <p class="section-kicker">
-            Character Archive
-          </p>
-
-          <h3 class="section-title">
-            Personagens em destaque
-          </h3>
-
+          <p class="section-kicker">Character Archive</p>
+          <h3 class="section-title">Personagens principais de Spider-Verse </h3>
         </div>
 
-
-
-        <!-- GRID DE CARDS -->
         <div class="card-grid">
 
-
-
-          <!-- CARD PERSONAGEM -->
+          <!-- IMAGEM 1 -->
           <article class="character-card">
-
-            <!-- Imagem -->
-            <img
-              src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?auto=format&fit=crop&w=900&q=80"
-              alt="Placeholder premium para Peter Parker"
-            />
-
-            <!-- Informações -->
+            <img src="images/PeterParker.jpg" alt="Peter Parker" />
             <div class="card-info">
-
               <h4>Peter Parker</h4>
-
-              <p>
-               É o Homem-Aranha, um super-herói da Marvel criado em 1962, conhecido como o "amigão da vizinhança" que equilibra sua vida de combate ao crime em Nova York com problemas pessoais
-              </p>
-
+              <p>É o Homem-Aranha, um super-herói da Marvel criado em 1962, conhecido como o "amigão da vizinhança" que equilibra sua vida de combate ao crime em Nova York com problemas pessoais</p>
             </div>
-
           </article>
 
-
-
-          <!-- CARD MILES -->
+          <!-- IMAGEM 2 -->
           <article class="character-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?auto=format&fit=crop&w=900&q=80"
-              alt="Placeholder premium para Miles Morales"
-            />
-
+            <img src="images/MilesMorales.png" alt="Miles Morales" />
             <div class="card-info">
-
               <h4>Miles Morales</h4>
-
-              <p>
-                é um super-herói adolescente afro-latino de Nova York, conhecido como o segundo Homem-Aranha no universo Ultimate e, posteriormente, no universo principal da Marvel. Criado em 2011, ele se destaca pelo carisma, habilidades como "ataque venenoso"
-              </p>
-
+              <p> É um super-herói adolescente afro-latino de Nova York, conhecido como o segundo Homem-Aranha no universo Ultimate e, posteriormente, no universo principal da Marvel. Criado em 2011, ele se destaca pelo carisma, habilidades como "ataque venenoso</p>
             </div>
-
           </article>
 
-
-
-          <!-- CARD GWEN -->
+          <!-- IMAGEM 3 -->
           <article class="character-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
-              alt="Placeholder premium para Gwen Stacy"
-            />
-
+            <img src="images/GwenStacy.png" alt="Gwen Stacy" />
             <div class="card-info">
-
               <h4>Gwen Stacy</h4>
-
-              <p>
-                Mulher-Aranha ou Aranha-Fantasma (Terra-65), é uma super-heroína da Marvel que ganha poderes após ser picada por uma aranha radioativa. Ela é caracterizada pelo uniforme branco, preto e rosa, habilidades acrobáticas, agilidade sobre-humana e uso de lançadores de teia.
-              </p>
-
+              <p>Mulher-Aranha ou Aranha-Fantasma (Terra-65), é uma super-heroína da Marvel que ganha poderes após ser picada por uma aranha radioativa. Ela é caracterizada pelo uniforme branco, preto e rosa, habilidades acrobáticas, agilidade sobre-humana e uso de lançadores de teia.</p>
             </div>
-
           </article>
 
-
-
-          <!-- CARD SPIDER  -->
+          <!-- IMAGEM 4 -->
           <article class="character-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80"
-              alt="Placeholder premium para Spider-Man "
-            />
-
+            <img src="images/OsSpiders.png" alt="Os Spiders" />
             <div class="card-info">
-
               <h4>Os Spider´s</h4>
-
-              <p>
-                Representam diferentes eras e facetas do herói: o clássico/emocional, o ágil/moderno e o tecnológico/vingador
-              </p>
-
+              <p>Representam diferentes eras e facetas do herói: o clássico/emocional, o ágil/moderno e o tecnológico/vingador</p>
             </div>
-
           </article>
 
         </div>
-
       </section>
 
-      <!-- SEÇÃO MULTIVERSO -->
-      <!-- Canvas + texto com efeito parallax -->
-
-
+      <!--  MULTIVERSE (TEIAS RESTAURADAS) -->
       <section class="multiverse section" id="multiverse">
-
         <div class="section-header">
-
-          <p class="section-kicker">
-            Connected Dimensions
-          </p>
-
-          <h3 class="section-title">
-            Teias entre universos
-          </h3>
-
+          <p class="section-kicker">Connected Dimensions</p>
+          <h3 class="section-title">Teias entre universos</h3>
         </div>
 
         <div class="multiverse-layout">
-
-          <!-- Texto explicativo -->
           <div class="multiverse-text">
-
             <p>
               Nesta seção, nós simulamos conexões dimensionais com visual 3D e camadas parallax,
               reforçando storytelling visual e domínio técnico em experiências interativas.
             </p>
-
           </div>
 
-          <!-- Canvas onde o efeito visual aparece -->
           <div class="multiverse-canvas-wrapper">
-
             <canvas id="multiverse-canvas"></canvas>
-
           </div>
-
         </div>
-
       </section>
 
-      <!-- GALERIA DE IMAGENS -->
-
+      <!-- GALERIA -->
       <section class="gallery section" id="gallery">
-
         <div class="section-header">
-
-          <p class="section-kicker">
-            Visual Frames
-          </p>
-
-          <h3 class="section-title">
-            Galeria cinematográfica
-          </h3>
-
+          <p class="section-kicker">Visual Frames</p>
+          <h3 class="section-title">Galeria cinematográfica</h3>
         </div>
 
-
-
-        <!-- GRID DE IMAGENS -->
         <div class="gallery-grid">
 
-          <figure><img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80" alt="Nova York a cidade dos spider's" /></figure>
-
-          <figure><img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1200&q=80" /></figure>
-
-          <figure><img src="https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&w=1200&q=80" alt="Reflexos urbanos" /></figure>
-
-          <figure><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80" alt="Arquitetura noturna" /></figure>
-
-          <figure><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80" alt="Detalhes de velocidade" /></figure>
-
-          <figure><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Painel tecnológico" /></figure>
+          <figure><img src="images/Cenario1.png" /></figure>
+          <figure><img src="images/Cenario2.png" /></figure>
+          <figure><img src="images/Cenario3.png" /></figure>
+          <figure><img src="images/Cenario4.png" /></figure>
+          <figure><img src="images/Cenario5.png" /></figure>
+          <figure><img src="images/Cenario6.png" /></figure>
 
         </div>
-
       </section>
 
-      <!-- Explicação do projeto -->
-    
+      <!-- SOBRE -->
       <section class="about section" id="about">
-
         <div class="section-header">
-
-          <p class="section-kicker">
-            Project Story
-          </p>
-
-          <h3 class="section-title">
-            Sobre o projeto
-          </h3>
-
+          <p class="section-kicker">Project Story</p>
+          <h3 class="section-title">Sobre o projeto</h3>
         </div>
 
         <p class="about-text">
-
-          Este projeto foi criado como uma experiência interativa inspirada no universo do Spider-Man,
-          utilizando tecnologias modernas de front-end para demonstrar habilidades em UI, animações e
-          interatividade. Tendo como objetivo principal mostrar parte da história dos Spider´s e as cenas e personagens principais dos filmes.
-
+          Este projeto foi criado como uma experiência interativa inspirada no universo do Spider-Man, utilizando tecnologias modernas de front-end para demonstrar habilidades em UI, animações e interatividade. Tendo como objetivo principal mostrar parte da história dos Spider´s e as cenas e personagens principais dos filmes.
         </p>
-
       </section>
 
-
-      <!-- FORMULÁRIO DE CONTATO -->
-
+      <!-- CONTATO -->
       <section class="contact section" id="contact">
-
         <div class="section-header">
-
-          <p class="section-kicker">
-            Transmission Channel
-          </p>
-
-          <h3 class="section-title">
-            Contato
-          </h3>
-
+          <p class="section-kicker">Transmission Channel</p>
+          <h3 class="section-title">Contato</h3>
         </div>
 
-        <!-- FORMULÁRIO -->
         <form id="contactForm" class="contact-form">
-
-          <!-- Campo nome -->
           <div class="field">
-
-            <label for="name">Nome</label>
-
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Seu nome"
-              required
-            />
-
-            <small class="error"></small>
-
+            <label>Nome</label>
+            <input type="text" required />
           </div>
 
-
-
-          <!-- Campo email -->
           <div class="field">
-
-            <label for="email">Email</label>
-
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="voce@email.com"
-              required
-            />
-
-            <small class="error"></small>
-
-          </div>
-          <div class="field">
-
-            <label for="message">Mensagem</label>
-
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Me conte sobre seu projeto"
-              required
-            ></textarea>
-
-            <small class="error"></small>
-
+            <label>Email</label>
+            <input type="email" required />
           </div>
 
+          <div class="field">
+            <label>Mensagem</label>
+            <textarea required></textarea>
+          </div>
 
-
-          <!-- Botão de enviar -->
-          <button type="submit" class="btn-primary">
-            Enviar mensagem
-          </button>
-
-          <!-- Status do envio -->
-          <p id="formStatus" class="form-status"></p>
-
+          <button class="btn-primary">Enviar</button>
         </form>
-
       </section>
 
     </main>
 
-    <!-- RODAPÉ DO SITE -->
     <footer class="footer">
-
-      <p>
-        © 2026 • Spider-Verse Experience — Portfolio / Kauã Pescaroli
-      </p>
-
+      <p>© 2026 • Spider-Verse Experience — Kauã Pescaroli</p>
     </footer>
 
   </body>

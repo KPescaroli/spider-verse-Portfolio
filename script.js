@@ -513,7 +513,7 @@ function initContactValidation() {
   const fields = {
     name: {
       input: document.getElementById("name"),
-      error: document.querySelector('[data-testid="contact-error-name"]'),
+      error: document.querySelector('#name + .error'),
       validate: (v) => v.trim().length >= 2,
       messageKey: "form.error.name",
     },
